@@ -1,1 +1,13 @@
-<ol class="linenums"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="pun"><</span><span class="pln">bits</span><span class="pun">/</span><span class="pln">stdc</span><span class="pun">++.</span><span class="pln">h</span><span class="pun">></span></li><li class="L1"><span class="kwd">using</span><span class="pln"> </span><span class="kwd">namespace</span><span class="pln"> std</span><span class="pun">;</span></li><li class="L2"><span class="pln"> </span></li><li class="L3"><span class="typ">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L4"><span class="pln">    string s</span><span class="pun">;</span></li><li class="L5"><span class="pln">    cin </span><span class="pun">>></span><span class="pln"> s</span><span class="pun">;</span></li><li class="L6"><span class="pln"> </span></li><li class="L7"><span class="pln">    s</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> toupper</span><span class="pun">(</span><span class="pln">s</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]);</span></li><li class="L8"><span class="pln"> </span></li><li class="L9"><span class="pln">    cout </span><span class="pun"><<</span><span class="pln"> s</span><span class="pun">;</span></li><li class="L0"><span class="pln"> </span></li><li class="L1"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></li><li class="L2"><span class="pun">}</span></li></ol>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+
+    s[0] = toupper(s[0]);
+
+    cout << s;
+
+    return 0;
+}

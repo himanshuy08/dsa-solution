@@ -8,7 +8,7 @@ public:
                 second = first;
                 first = nums[i];
             }
-            else if(nums[i]<first){
+            else if(nums[i]>second){
                 second = nums[i];
             }
 

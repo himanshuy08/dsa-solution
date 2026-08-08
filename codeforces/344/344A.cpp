@@ -1,1 +1,29 @@
-<ol class="linenums"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="pun"><</span><span class="pln">bits</span><span class="pun">/</span><span class="pln">stdc</span><span class="pun">++.</span><span class="pln">h</span><span class="pun">></span></li><li class="L1"><span class="kwd">using</span><span class="pln"> </span><span class="kwd">namespace</span><span class="pln"> std</span><span class="pun">;</span></li><li class="L2"><span class="pln"> </span></li><li class="L3"><span class="typ">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L4"><span class="pln">    ios</span><span class="pun">::</span><span class="pln">sync_with_stdio</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">);</span></li><li class="L5"><span class="pln">    cin</span><span class="pun">.</span><span class="pln">tie</span><span class="pun">(</span><span class="kwd">nullptr</span><span class="pun">);</span></li><li class="L6"><span class="pln"> </span></li><li class="L7"><span class="pln">    </span><span class="typ">int</span><span class="pln"> n</span><span class="pun">;</span></li><li class="L8"><span class="pln">    cin </span><span class="pun">>></span><span class="pln"> n</span><span class="pun">;</span></li><li class="L9"><span class="pln"> </span></li><li class="L0"><span class="pln">    string prev</span><span class="pun">,</span><span class="pln"> curr</span><span class="pun">;</span></li><li class="L1"><span class="pln">    cin </span><span class="pun">>></span><span class="pln"> prev</span><span class="pun">;</span></li><li class="L2"><span class="pln"> </span></li><li class="L3"><span class="pln">    </span><span class="typ">int</span><span class="pln"> groups </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span></li><li class="L4"><span class="pln"> </span></li><li class="L5"><span class="pln">    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i </span><span class="pun"><</span><span class="pln"> n</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L6"><span class="pln">        cin </span><span class="pun">>></span><span class="pln"> curr</span><span class="pun">;</span></li><li class="L7"><span class="pln"> </span></li><li class="L8"><span class="pln">        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">curr </span><span class="pun">!=</span><span class="pln"> prev</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L9"><span class="pln">            groups</span><span class="pun">++;</span></li><li class="L0"><span class="pln">        </span><span class="pun">}</span></li><li class="L1"><span class="pln"> </span></li><li class="L2"><span class="pln">        prev </span><span class="pun">=</span><span class="pln"> curr</span><span class="pun">;</span></li><li class="L3"><span class="pln">    </span><span class="pun">}</span></li><li class="L4"><span class="pln"> </span></li><li class="L5"><span class="pln">    cout </span><span class="pun"><<</span><span class="pln"> groups </span><span class="pun"><<</span><span class="pln"> </span><span class="str">'\n'</span><span class="pun">;</span></li><li class="L6"><span class="pln"> </span></li><li class="L7"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></li><li class="L8"><span class="pun">}</span></li></ol>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    string prev, curr;
+    cin >> prev;
+
+    int groups = 1;
+
+    for (int i = 1; i < n; i++) {
+        cin >> curr;
+
+        if (curr != prev) {
+            groups++;
+        }
+
+        prev = curr;
+    }
+
+    cout << groups << '\n';
+
+    return 0;
+}

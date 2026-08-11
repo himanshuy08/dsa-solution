@@ -1,1 +1,21 @@
-<ol class="linenums"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="pun"><</span><span class="pln">bits</span><span class="pun">/</span><span class="pln">stdc</span><span class="pun">++.</span><span class="pln">h</span><span class="pun">></span></li><li class="L1"><span class="kwd">using</span><span class="pln"> </span><span class="kwd">namespace</span><span class="pln"> std</span><span class="pun">;</span></li><li class="L2"><span class="pln"> </span></li><li class="L3"><span class="typ">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L4"><span class="pln">    </span><span class="typ">int</span><span class="pln"> n</span><span class="pun">;</span></li><li class="L5"><span class="pln">    cin </span><span class="pun">>></span><span class="pln"> n</span><span class="pun">;</span></li><li class="L6"><span class="pln"> </span></li><li class="L7"><span class="pln">    </span><span class="typ">vector</span><span class="str"><int></span><span class="pln"> p</span><span class="pun">(</span><span class="pln">n </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span></li><li class="L8"><span class="pln">    </span><span class="typ">vector</span><span class="str"><int></span><span class="pln"> ans</span><span class="pun">(</span><span class="pln">n </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span></li><li class="L9"><span class="pln"> </span></li><li class="L0"><span class="pln">    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i </span><span class="pun"><=</span><span class="pln"> n</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L1"><span class="pln">        cin </span><span class="pun">>></span><span class="pln"> p</span><span class="pun">[</span><span class="pln">i</span><span class="pun">];</span></li><li class="L2"><span class="pln">        ans</span><span class="pun">[</span><span class="pln">p</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> i</span><span class="pun">;</span></li><li class="L3"><span class="pln">    </span><span class="pun">}</span></li><li class="L4"><span class="pln"> </span></li><li class="L5"><span class="pln">    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i </span><span class="pun"><=</span><span class="pln"> n</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L6"><span class="pln">        cout </span><span class="pun"><<</span><span class="pln"> ans</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="pun"><<</span><span class="pln"> </span><span class="str">" "</span><span class="pun">;</span></li><li class="L7"><span class="pln">    </span><span class="pun">}</span></li><li class="L8"><span class="pln"> </span></li><li class="L9"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></li><li class="L0"><span class="pun">}</span></li></ol>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> p(n + 1);
+    vector<int> ans(n + 1);
+
+    for (int i = 1; i <= n; i++) {
+        cin >> p[i];
+        ans[p[i]] = i;
+    }
+
+    for (int i = 1; i <= n; i++) {
+        cout << ans[i] << " ";
+    }
+
+    return 0;
+}
